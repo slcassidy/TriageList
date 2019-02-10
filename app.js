@@ -16,6 +16,23 @@ const message2 = 'Please select which name you would like to'
 // Start of the Request
 const command = prompt('Choose one: update, delete, add, reorder');
 
+// If it is not one of the ones available then prompt the user to exit.. extra
+
+// if(command != "add" && command != "Add" && command != "ADD" && command != "update" && command != "Update" && command != "UPDATE" &&
+// command != "delete" && command != "Delete" && command != "DELETE" && command != "reorder" && command != "Reorder" && command != "REORDER"){
+
+//   alert(`Incorrect selection. ${command} or select exit`)
+
+//   if(command === "exit"){
+//     // Make them exit the selection process
+    
+//   }else{
+//     command
+//   }
+
+//   alert(patientList);
+// }
+
 // 1. If the user typed in 'add', prompt them for a patient name, add that patient to the list, and display the list. 
 
 if(command == "add" || command == "Add" || command == "ADD"){
@@ -66,6 +83,7 @@ if(command == "reorder" || command == "Reorder" || command == "REORDER"){
   var i;
   var r;
   var t;
+  // Find where in the array the patents names are located
 
   for (i=0; i < patientList.length; i++) {
     if (patientList[i] === reorderPatient) {
@@ -81,6 +99,7 @@ if(command == "reorder" || command == "Reorder" || command == "REORDER"){
   //   }
   // }
 
+  // Modify the location of the names based on where they are positioned in the array
   for (i=0; i < patientList.length; i++) {
     if (i === r) {
           patientList.splice(i,1)
